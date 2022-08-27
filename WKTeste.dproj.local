@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/08/08 22:29:06.000.396,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/25 20:39:23.000.762,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/25 21:14:39.000.072,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Teste_WK\Uprincipal.dfm</Transaction>
+    <Transaction>2022/08/25 21:14:39.000.072,C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Teste_WK\Uprincipal.pas</Transaction>
+    <Transaction>2022/08/25 21:15:03.000.068,C:\Users\User\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Teste_WK\WKTeste.dproj</Transaction>
+    <Transaction>2022/08/25 21:18:16.000.918,=C:\Teste_WK\Unit1.pas</Transaction>
+    <Transaction>2022/08/25 21:18:41.000.909,C:\Teste_WK\Unit1.dfm=C:\Teste_WK\uDados.dfm</Transaction>
+    <Transaction>2022/08/25 21:18:41.000.909,C:\Teste_WK\Unit1.pas=C:\Teste_WK\uDados.pas</Transaction>
+    <Transaction>2022/08/25 21:21:09.000.084,=C:\Teste_WK\Ufuncoes.pas</Transaction>
+  </Transactions>
+</BorlandProject>

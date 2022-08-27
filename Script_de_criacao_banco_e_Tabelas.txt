@@ -1,0 +1,95 @@
+create database bancoteste;
+
+create table clientes
+(
+CodigoCliente int auto_increment,
+Nome varchar(100),
+Cidade varchar(100),
+UF varchar(2),
+primary key (CodigoCliente)
+);
+
+insert into clientes (Nome,Cidade,UF) values ('João','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('José','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Pedro','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Maria','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Silvia','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Paulo','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('João Pedro','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('José Pedro','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Pedro Paulo','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Maria Silva','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Silvia Maria','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Paulo José','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('João Paulo','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('José Maria','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Pedro Silva','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Maria Socorro','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Silvia Santos','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Paulo Amorim','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('João Pedro Silva','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('José Pedro Schimidt','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Pedro Paulo Marinho','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Maria Silva Rego','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Silvia Maria Fonseca','Maceió','AL');
+insert into clientes (Nome,Cidade,UF) values ('Paulo José Nunes','Maceió','AL');
+
+create table produtos
+(
+CodigoProduto int auto_increment ,
+Descricao varchar(100),
+PrecoVenda Decimal(10,2),
+primary key (CodigoProduto)
+);
+
+insert into produtos (Descricao, PrecoVenda) values ('Leite em Pó',10.01);
+insert into produtos (Descricao, PrecoVenda) values ('Leite Condensado',6);
+insert into produtos (Descricao, PrecoVenda) values ('Doçe de Leite',11);
+insert into produtos (Descricao, PrecoVenda) values ('Arroz',4.44);
+insert into produtos (Descricao, PrecoVenda) values ('Feijão Carioca',8.34);
+
+insert into produtos (Descricao, PrecoVenda) values ('Leite em Pó Desnatado',8.78);
+insert into produtos (Descricao, PrecoVenda) values ('Leite em Pó Zero Lactose',11.93);
+insert into produtos (Descricao, PrecoVenda) values ('Doçe de Leite Zero Lactose',17.75);
+insert into produtos (Descricao, PrecoVenda) values ('Arroz Integral',6.44);
+insert into produtos (Descricao, PrecoVenda) values ('Feijão Preto',8.99);
+
+insert into produtos (Descricao, PrecoVenda) values ('Leite UHT Desnatado',9.78);
+insert into produtos (Descricao, PrecoVenda) values ('Leite UHT Zero Lactose',11.93);
+insert into produtos (Descricao, PrecoVenda) values ('Goiabada Cascão',10.75);
+insert into produtos (Descricao, PrecoVenda) values ('Arroz Parbolizado',8.44);
+insert into produtos (Descricao, PrecoVenda) values ('Banana',8.99);
+
+insert into produtos (Descricao, PrecoVenda) values ('Tomate',6.77);
+insert into produtos (Descricao, PrecoVenda) values ('Cebola',4.93);
+insert into produtos (Descricao, PrecoVenda) values ('Cenoura',5.75);
+insert into produtos (Descricao, PrecoVenda) values ('Alface Lisa',6.44);
+insert into produtos (Descricao, PrecoVenda) values ('Alface Crespa',6.99);
+
+insert into produtos (Descricao, PrecoVenda) values ('Batata Inglesa',7.78);
+insert into produtos (Descricao, PrecoVenda) values ('Batata Doce',4.93);
+insert into produtos (Descricao, PrecoVenda) values ('Mandioca',3.75);
+insert into produtos (Descricao, PrecoVenda) values ('Flocão de Milho',2.44);
+insert into produtos (Descricao, PrecoVenda) values ('Atum Lata 200mg',5.99);
+
+create table pedido
+(
+ NumeroPedido int auto_increment,
+ DataEmissao date,
+ CodigoCliente int,
+ ValorTotal decimal(10,2),
+ primary key (NumeroPedido)
+ );
+ 
+ create table pedidoitem
+ (
+  id int auto_increment,
+  NumeroPedido int not null,
+  CodigoProduto int not null,
+  Quantidade decimal(10,3),
+  ValorUnitario decimal(10,2),
+  ValorTotal decimal(10,2),
+  primary key (id),
+  constraint fk_NumeroPedido foreign key (NumeroPedido) references pedido (NumeroPedido) 
+ );
+
